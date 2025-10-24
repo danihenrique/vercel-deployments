@@ -3,6 +3,8 @@
 Linux port of the macOS menu bar app to monitor Vercel deployments.
 Inspired by the macOS project: vercel-deployment-menu-bar (`https://github.com/andrewk17/vercel-deployment-menu-bar`).
 
+![Vercel Deployments](cover.png)
+
 ## Features
 
 - Real-time deployment status (building, ready, error)

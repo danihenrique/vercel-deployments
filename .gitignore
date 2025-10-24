@@ -35,6 +35,7 @@ debian/files
 debian/*.substvars
 # Package staging dir created during build
 debian/vercel-menu-indicator/
+debian/vercel-deployments/
 debian/tmp/
 
 # Logs

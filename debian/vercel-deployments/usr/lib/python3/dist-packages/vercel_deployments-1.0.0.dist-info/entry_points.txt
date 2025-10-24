@@ -1,2 +1,0 @@
-[console_scripts]
-vercel-deployments = vercel_menu_indicator.main:main
