@@ -32,7 +32,7 @@ class VercelIndicator:
     def __init__(self) -> None:
         self.indicator = AppIndicator3.Indicator.new(
             APPINDICATOR_ID,
-            "vercel-deployments",
+            "vercel-deployments-symbolic",
             AppIndicator3.IndicatorCategory.APPLICATION_STATUS,
         )
         self.indicator.set_status(AppIndicator3.IndicatorStatus.ACTIVE)
