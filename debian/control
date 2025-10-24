@@ -1,0 +1,17 @@
+Source: vercel-deployments
+Section: utils
+Priority: optional
+Maintainer: Liglu <maintainers@example.com>
+Build-Depends: debhelper-compat (= 13), dh-python, python3-all, pybuild-plugin-pyproject
+Standards-Version: 4.6.2
+Homepage: https://github.com/andrewk17/vercel-deployment-menu-bar
+
+Package: vercel-deployments
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, python3-gi, gir1.2-gtk-3.0, gir1.2-notify-0.7, gir1.2-ayatanaappindicator3-0.1 | gir1.2-appindicator3-0.1, libayatana-appindicator3-1 | libappindicator3-1, python3-requests
+Description: GNOME AppIndicator to monitor Vercel deployments
+ This package provides a Linux port of a macOS menu bar app to monitor
+ Vercel deployments (build/ready/error). Shows recent deployments and
+ quick access to open them in the browser.
+
+

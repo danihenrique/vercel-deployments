@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vercel-deployments"
+version = "1.0.0"
+description = "Linux GNOME AppIndicator to monitor Vercel deployments"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+  { name = "Liglu" }
+]
+dependencies = [
+  "requests>=2.31.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/andrewk17/vercel-deployment-menu-bar"
+
+[project.scripts]
+vercel-deployments = "vercel_menu_indicator.main:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py38"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["vercel_menu_indicator*"]
+
+

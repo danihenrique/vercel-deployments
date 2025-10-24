@@ -1,0 +1,41 @@
+# Python bytecode/cache
+__pycache__/
+*.py[cod]
+
+# Packaging/build artifacts
+build/
+dist/
+.eggs/
+*.egg-info/
+pip-wheel-metadata/
+.pybuild/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Tooling caches
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+
+# Editors/OS
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# Debian build artifacts (repo-local)
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/*.substvars
+# Package staging dir created during build
+debian/vercel-menu-indicator/
+debian/tmp/
+
+# Logs
+*.log

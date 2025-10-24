@@ -1,0 +1,38 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'
+    
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install -y build-essential debhelper dh-python python3-all pybuild-plugin-pyproject
+        sudo apt install -y python3-gi gir1.2-gtk-3.0 gir1.2-notify-0.7 gir1.2-ayatanaappindicator3-0.1 libayatana-appindicator3-1 python3-requests
+    
+    - name: Build .deb package
+      run: |
+        dpkg-buildpackage -us -uc -b
+    
+    - name: Upload .deb to release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: ../vercel-deployments_*.deb
+        asset_name: vercel-deployments_${{ github.ref_name }}_all.deb
+        asset_content_type: application/vnd.debian.binary-package
