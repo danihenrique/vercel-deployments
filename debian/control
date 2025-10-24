@@ -1,10 +1,10 @@
 Source: vercel-deployments
 Section: utils
 Priority: optional
-Maintainer: Liglu <maintainers@example.com>
+Maintainer: Dani Henrique <danihenrique@gmail.com>
 Build-Depends: debhelper-compat (= 13), dh-python, python3-all, pybuild-plugin-pyproject
 Standards-Version: 4.6.2
-Homepage: https://github.com/andrewk17/vercel-deployment-menu-bar
+Homepage: https://github.com/danihenrique/vercel-deployments
 
 Package: vercel-deployments
 Architecture: all

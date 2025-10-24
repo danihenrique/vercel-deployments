@@ -17,7 +17,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/andrewk17/vercel-deployment-menu-bar"
+Homepage = "https://github.com/danihenrique/vercel-deployments"
 
 [project.scripts]
 vercel-deployments = "vercel_menu_indicator.main:main"

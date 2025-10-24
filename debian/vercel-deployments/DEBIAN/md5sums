@@ -7,10 +7,11 @@ d2339f9e45eea4f1a5619023397291e8  usr/lib/python3/dist-packages/vercel_deploymen
 0319c5ace1aff3e04cfe7ab3f40f87a2  usr/lib/python3/dist-packages/vercel_menu_indicator/__init__.py
 ab1508e7f65df03371d2ac636059cf76  usr/lib/python3/dist-packages/vercel_menu_indicator/api.py
 b22df74f9a3e39a96beb8e6ff9d0f9e8  usr/lib/python3/dist-packages/vercel_menu_indicator/config.py
-c4090f55a2112f4f3330fc2be9bcbcfc  usr/lib/python3/dist-packages/vercel_menu_indicator/indicator.py
+9e0df494778d95f3f22f8eb00ef80056  usr/lib/python3/dist-packages/vercel_menu_indicator/indicator.py
 52a5870c2c8b86f46344af11ab074171  usr/lib/python3/dist-packages/vercel_menu_indicator/main.py
 6f51e1588b7589d6dec657aabb52e703  usr/lib/python3/dist-packages/vercel_menu_indicator/preferences.py
 6468458972ad660bfbfc026684e6fdaf  usr/share/applications/vercel-deployments.desktop
 e016cefa80bc4d20bfcdfae0abc92de5  usr/share/doc/vercel-deployments/changelog.Debian.gz
+3387cc9620744013ccf5e01dab726bb2  usr/share/icons/hicolor/16x16/apps/vercel-deployments-symbolic.png
 3387cc9620744013ccf5e01dab726bb2  usr/share/icons/hicolor/16x16/apps/vercel-deployments.png
 a71ac9957a42f6ecbfc91eb315b038e0  usr/share/icons/hicolor/scalable/apps/vercel-deployments-symbolic.svg
