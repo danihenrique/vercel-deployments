@@ -28,11 +28,12 @@ jobs:
         dpkg-buildpackage -us -uc -b
     
     - name: Upload .deb to release
-      uses: actions/upload-release-asset@v1
+      uses: softprops/action-gh-release@v1
+      with:
+        files: ../vercel-deployments_*.deb
+        tag_name: ${{ github.ref_name }}
+        name: Release ${{ github.ref_name }}
+        draft: false
+        prerelease: false
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ github.event.release.upload_url }}
-        asset_path: ../vercel-deployments_*.deb
-        asset_name: vercel-deployments_${{ github.ref_name }}_all.deb
-        asset_content_type: application/vnd.debian.binary-package
