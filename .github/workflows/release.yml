@@ -26,6 +26,18 @@ jobs:
         sudo apt install -y build-essential debhelper dh-python python3-all pybuild-plugin-pyproject
         sudo apt install -y python3-gi gir1.2-gtk-3.0 gir1.2-notify-0.7 gir1.2-ayatanaappindicator3-0.1 libayatana-appindicator3-1 python3-requests
     
+    - name: Extract version from tag
+      id: get_version
+      run: |
+        VERSION=${GITHUB_REF#refs/tags/v}
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        echo "Version extracted: $VERSION"
+    
+    - name: Update changelog with correct version
+      run: |
+        VERSION=${{ steps.get_version.outputs.version }}
+        sed -i "s/vercel-deployments (.*) unstable/vercel-deployments ($VERSION-1) unstable/" debian/changelog
+    
     - name: Build .deb package
       run: |
         dpkg-buildpackage -us -uc -b
